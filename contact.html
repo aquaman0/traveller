@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon.png">
+    <title>Traveller | Contact Us</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./all.css" />
+</head>
+<body>
+    <nav>
+        <div class="img-logo-div">
+          <img src="./logo.png">
+          <h1>Traveller</h1>
+        </div>
+        <ul>
+          <li><a href="./travel_recommendation.html" id="home">Home </a></li>
+          <li><a href="./about.html" id="about">About Us </a></li>
+          <li><a href="./contact.html" id="contact">Contact Us </a></li>
+        </ul>
+        <ul class="search-ul">
+          <li><input type="text" id="searchInput" placeholder="Enter a destination or keyword">  </li>
+          <li><button id='btnSearch' class="book-btn">Search</button></li>
+          <li><button id='btnClear' class="book-btn">Clear</button></li>
+        </ul>
+    </nav>
+    <div class="home-div">
+        <div class="container-popup" id="popup">
+            <div class="suggestions-div" id="suggestions">
+            </div>
+        </div>
+        <div class="social-web">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+        <div class="contact-headers">
+            <h3>CONTACT US</h3>
+            <h4>Get in touch.</h4>
+        </div>
+        <div class="contact-headers">
+            <form class="contact-form">
+                <div class="contact-input-div">
+                    <input class="contact-input" type="text" name="name" placeholder="Name">
+                </div>
+                <div class="contact-input-div">
+                    <input class="contact-input" type="text" name="email" placeholder="Email">
+                </div>
+                <div class="contact-input-div">
+                    <textarea class="contact-textarea" placeholder="Message"></textarea>
+                </div>
+                <div class="contact-input-div">
+                    <button class="book-btn" id="submit-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="./travel_recommendation.js"></script>
+<script>
+    let submitBtn = document.getElementById('submit-btn');
+    submitBtn.addEventListener("click", function () {
+        alert('Thank you for your request.');
+    });
+</script>
+</body>
+</html>

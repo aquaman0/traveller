@@ -1,0 +1,305 @@
+/* Basic CSS for the navigation bar */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    background-color: #333333;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+}
+
+nav ul {
+    list-style-type: none;
+    /* padding: 0; */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+nav ul li a {
+    transition: .5s;
+}
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+.img-logo-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-logo-div img {
+    max-height: 50px;
+}
+
+nav a,
+nav h1 {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+/* Basic CSS for the form elements */
+body {
+    font-family: Raleway, sans-serif;
+    background: url("./background.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    height: 90vh;
+}
+
+div {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    padding: 5px;
+}
+
+button {
+    padding: 7px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Basic CSS for the report section */
+h2 {
+    margin-top: 30px;
+}
+h3, i, h4, p, b {
+    color: #FFFFFF;
+}
+
+#report,#result {
+    padding: 10px;
+    max-width: 400px;
+    word-wrap: break-word;
+}
+#result {
+    height: 400px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+#result img{
+    width: 200px;
+    height: 100px;
+}
+
+.search-ul {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px;
+}
+.search-ul input {
+    border: none;
+}
+.search-ul input:focus {
+    border-bottom: 1px solid #000000;
+    outline: none;
+}
+.home-div {
+    height: 80%;
+    margin: 0;
+}
+.social-web {
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.social-web i {
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+.social-web i:last-child {
+    margin-bottom: 0;
+}
+.social-web i:hover {
+    transform: scale(1.2);
+    color: #000000;
+    cursor: pointer;
+}
+.home-headers {
+    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home-headers h3,
+.about-headers h3,
+.contact-headers h3 {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.home-headers h4 {
+    margin-bottom: 20px;
+}
+.book-btn {
+    background-color: #278db1;
+    border: none;
+    border-radius: 5px;
+    transition: .5s;
+}
+.about-headers {
+    width: 80%;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+.lightblack-p {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    line-height: normal;
+}
+.our-team {
+    margin-top: 50px;
+    flex-wrap: nowrap;
+    gap: 5%;
+    width: 100%;
+}
+.team-elem {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    flex-direction: column;
+    padding: 10px;
+}
+.team-elem p {
+    margin-bottom: 10px;
+}
+.team-name {
+    justify-content: space-evenly;
+}
+.team-vacancy {
+    background: #278db1;
+    border-radius: 5px;
+    padding: 10px;
+    color: #FFFFFF;
+    justify-content: center;
+}
+.contact-headers {
+    width: 40%;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+.contact-form {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contact-input-div {
+    width: 100%;
+    justify-content: center;
+}
+.contact-input,
+.contact-textarea {
+    margin-bottom: 20px;
+    width: 100%;
+    background: transparent;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-family: Raleway, sans-serif;
+    transition: .5s;
+}
+.contact-textarea {
+    min-height: 100px;
+}
+.contact-input:focus,
+.contact-textarea:focus {
+    outline: none;
+    border: 1px solid #FFFFFF;
+}
+.container-popup {
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 50%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s linear, visibility .5s linear;
+}
+.container-popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+.suggestions-div,
+.suggestion,
+.suggestion-desc,
+.suggestion-img {
+    flex-direction: column;
+    margin-bottom: 0;
+}
+.suggestions-div {
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.suggestion {
+    width: 70%;
+    height: 300px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.suggestion-img {
+    height: 70%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+.suggestion-img img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+.suggestion-desc {
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+}
+.suggestion-desc h3,
+.suggestion-desc p {
+    color: #000000;
+}
+.suggestion-desc p {
+    font-size: 12px;
+}
